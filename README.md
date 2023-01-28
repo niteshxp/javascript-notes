@@ -166,3 +166,57 @@ Promises and async/await allows you to write async code in a way that looks more
 
 It's important to keep in mind that the key is to make your code as readable and maintainable as possible, and that the solution will depend on the specific use case.
 </details>
+
+#### 8. PROMISES
+<details> <summary> Click here </summary>
+A promise in JavaScript is an object that represents the eventual completion or failure of an asynchronous operation. Promises provide a way to handle asynchronous code in a more structured and predictable way.
+
+A promise has a state, which can be one of:
+
+* "pending" (initial state)
+* "fulfilled" (operation completed successfully)
+* "rejected" (operation failed)
+
+A promise has two main methods:
+
+* then(): is called when the promise is fulfilled and allows you to register callbacks to handle the resolved value
+* catch(): is called when the promise is rejected and allows you to register a callback to handle the rejection reason
+
+Here is an example of using promises to handle an asynchronous operation:
+```
+let promise = new Promise(function(resolve, reject) {
+    setTimeout(() => resolve("Hello World"), 2000);
+});
+
+promise.then(function(value) {
+    console.log(value); // Output: "Hello World"
+}).catch(function(error) {
+    console.log(error);
+});
+```
+In the example above, the promise is created with a function that takes two arguments: resolve and reject. The function sets a timeout to resolve the promise with the value "Hello World" after 2 seconds. The then() method is used to register a callback that logs the resolved value "Hello World" to the console. The catch() method is used to handle any errors that may occur during the promise execution.
+
+Promise chaining allows you to chain multiple promises together, where the return value of one promise is passed as the input to the next promise in the chain. This makes the code more readable and manageable.
+
+```
+let promise1 = new Promise(function(resolve, reject) {
+    setTimeout(() => resolve("Hello"), 2000);
+});
+
+let promise2 = new Promise(function(resolve, reject) {
+    setTimeout(() => resolve("World"), 2000);
+});
+
+promise1.then(function(value) {
+    console.log(value); // Output: "Hello"
+    return promise2;
+}).then(function(value) {
+    console.log(value); // Output: "World"
+});
+
+```
+
+In the example above, promise1 and promise2 are created and resolved with the values "Hello" and "World" respectively. The first then() method logs the resolved value of promise1 and returns promise2. The second then() method logs the resolved value of promise2.
+
+Promises are a powerful tool to handle asynchronous code in JavaScript and they are supported by most modern browsers and JavaScript environments.
+</details>
