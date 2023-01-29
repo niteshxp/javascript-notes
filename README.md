@@ -220,3 +220,27 @@ In the example above, promise1 and promise2 are created and resolved with the va
 
 Promises are a powerful tool to handle asynchronous code in JavaScript and they are supported by most modern browsers and JavaScript environments.
 </details>
+
+#### 9. ASYNC AND AWAIT:
+<details> <summary> Click here </summary>
+"async" and "await" are keywords in JavaScript that allow for asynchronous programming.
+
+Example using "async":
+```
+async function fetchData() {
+  const response = await fetch('https://api.example.com/data');
+  const data = await response.json();
+  return data;
+}
+```
+
+Example using "await":
+
+```async function fetchDataAndProcess() {
+  const data = await fetchData();
+  console.log(data);
+}
+```
+
+In these examples, the 'fetchData' function is declared as 'async', meaning it returns a Promise and can be "awaited". The `fetchDataAndProcess` function "awaits" the resolved value of the `fetchData` Promise and logs the returned data to the console.
+</details>
