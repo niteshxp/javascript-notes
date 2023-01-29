@@ -167,7 +167,7 @@ Promises and async/await allows you to write async code in a way that looks more
 It's important to keep in mind that the key is to make your code as readable and maintainable as possible, and that the solution will depend on the specific use case.
 </details>
 
-#### 8. PROMISES
+#### 8. PROMISES :
 <details> <summary> Click here </summary>
 A promise in JavaScript is an object that represents the eventual completion or failure of an asynchronous operation. Promises provide a way to handle asynchronous code in a more structured and predictable way.
 
@@ -242,5 +242,31 @@ Example using "await":
 }
 ```
 
-In these examples, the 'fetchData' function is declared as 'async', meaning it returns a Promise and can be "awaited". The `fetchDataAndProcess` function "awaits" the resolved value of the `fetchData` Promise and logs the returned data to the console.
+In these examples, the `fetchData` function is declared as `async`, meaning it returns a Promise and can be "awaited". The `fetchDataAndProcess` function "awaits" the resolved value of the `fetchData` Promise and logs the returned data to the console.
 </details>
+
+#### 10. DESTRUCTURING AND SPREADING:
+<details> <summary> Click here </summary>
+ Destructuring is a feature in JavaScript that allows you to extract values from arrays or objects and assign them to variables. It allows you to extract data from arrays or objects and assign them to variables in a more concise and readable way.
+
+For example, instead of using the traditional method of accessing an object's properties (object.property), you can use destructuring to assign the value of the property to a variable:
+
+```
+ const obj = {x:1, y:2, z:3};
+const {x, y, z} = obj;
+console.log(x, y, z); // 1 2 3
+```
+ 
+ Spreading is a feature in JavaScript that allows you to spread elements of an array or object into a new array or object. It allows you to copy or concatenate arrays and objects in a more concise and readable way.
+
+For example, you can use the spread operator to concatenate two arrays:
+ ```const a = [1, 2, 3];
+const b = [4, 5, 6];
+const c = [...a, ...b];
+console.log(c); // [1, 2, 3, 4, 5, 6]
+```
+ or to clone the object:
+ ```
+ const obj = {x:1, y:2, z:3};
+const newObj = {...obj};
+```
