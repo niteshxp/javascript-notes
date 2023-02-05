@@ -271,12 +271,13 @@ console.log(c); // [1, 2, 3, 4, 5, 6]
 const newObj = {...obj};
 ```
 
+ 
 #### 11. CALL, BIND, APPLY :
 <details> <summary> Click here </summary>
 
 `call`, `bind`, and `apply` are JavaScript methods that allow you to call a function and set its this value, which is the value of the this keyword inside the function.
 
-1. `call`: The call method allows you to call a function and set its this value to an object of your choice. Here's an example:
+* `call`: The call method allows you to call a function and set its this value to an object of your choice. Here's an example:
 
 ```let person = {
   firstName: 'John',
@@ -296,7 +297,7 @@ console.log(person.fullName.call(anotherPerson)); // Jane Doe
 ```
 In this example, `person.fullName()` returns 'John Doe' because `this` inside the `fullName` function refers to the `person` object. When we call `person.fullName.call(anotherPerson)`, we are using the call method to set this inside the `fullName` function to `anotherPerson`, so 'Jane Doe' is returned.
 
-2. `apply`: The `apply` method works similarly to `call`, but instead of passing arguments one by one, you pass them as an array. Here's an example:
+* `apply`: The `apply` method works similarly to `call`, but instead of passing arguments one by one, you pass them as an array. Here's an example:
 ```
 let numbers = [5, 10, 15];
 let max = Math.max.apply(null, numbers);
@@ -306,7 +307,7 @@ console.log(max); // 15
 
 In this example, we are using the `apply` method to call the `Math.max` function and pass it `numbers` as an argument. The first argument to `apply`, `null`, sets `this` inside the `Math.max` function to `null`.
 
-3. `bind`: The `bind` method creates a new function with `thi` set to the object you specify, and returns the new function. Here's an example:
+* `bind`: The `bind` method creates a new function with `thi` set to the object you specify, and returns the new function. Here's an example:
 ```
 let person = {
   firstName: 'John',
